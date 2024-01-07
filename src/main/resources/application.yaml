@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root123
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  sql:
+    init:
+      mode: always
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+command:
+  expire-time: 3600000
+  jwt-key: xohlagannarsahxbjkvhsdhfguhtjksglkdhgsrjgdfgfhndfljhtjilgjkfng
+logging:
+  file:
+    name: log/appAvia.log
+  pattern:
+    file: '%d{yyyy-MM-dd HH:mm:ss} %-5level --- [%thread] %logger : %msg%n'
+
+
